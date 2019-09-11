@@ -1,0 +1,2 @@
+# douban_sentiment_analysis
+基于朴素贝叶斯实现的豆瓣影评情感分析
