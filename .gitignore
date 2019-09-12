@@ -1,8 +1,9 @@
 # IDE
 .vscode/
 .idea/
+.ipynb_checkpoints
 # model
-data/byes.pkl
+data/bayes.pkl
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

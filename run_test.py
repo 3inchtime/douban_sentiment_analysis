@@ -1,33 +1,13 @@
 # -*- coding: utf-8 -*-
-import random
-import numpy as np
-import csv
-from native_byes_sentiment_analyzer import SentimentAnalyzer
+from native_bayes_sentiment_analyzer import SentimentAnalyzer
 
 
-model_path = './data/byes.pkl'
+model_path = './data/bayes.pkl'
 userdict_path = './data/userdict.txt'
 stopword_path = './data/stopwords.txt'
 corpus_path = './data/review.csv'
 
 
-def load_corpus(corpus_path):
-    with open(corpus_path, 'r') as f:
-        reader = csv.reader(f)
-        rows = [row for row in reader]
-
-    review_data = np.array(rows).tolist()
-    random.shuffle(review_data)
-
-    review_list = []
-    for words in review_data[:20]:
-        review_list.append(words[1])
-
-    return review_list
-
-
 analyzer = SentimentAnalyzer(model_path=model_path, stopword_path=stopword_path, userdict_path=userdict_path)
-
-review_list = load_corpus(corpus_path=corpus_path)
-for review in review_list:
-    analyzer.analyze(text=review)
+text = '倍感失望的一部诺兰的电影，感觉更像是盗梦帮的一场大杂烩。虽然看之前就知道肯定是一部无法超越前传2的蝙蝠狭，但真心没想到能差到这个地步。节奏的把控的失误和角色的定位模糊绝对是整部影片的硬伤。'
+analyzer.analyze(text=text)
