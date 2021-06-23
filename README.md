@@ -1,6 +1,8 @@
 # douban_sentiment_analysis
 基于朴素贝叶斯实现的豆瓣影评情感分析
 
+详细流程请看 <https://juejin.cn/post/6844903941226921991>
+
 语料来自与豆瓣Top250排行榜中的影评，基于Scrapy抓取，大约5w条影评，好评差评各占50%。
 
 豆瓣影评爬虫 <https://github.com/3inchtime/douban_movie_review>
